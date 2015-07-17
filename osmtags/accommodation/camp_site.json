@@ -1,11 +1,12 @@
 [{
-	"shortname": "caravan",
-	"longname":"caravan site",
-	"form": {
+        "sectionname": "osm",
+        "sectiondescription": "osm camp site",
+        "forms": [{
+                "formname":"",
 		"formitems":[
 		    {"key":"tourism", "value":"", "type":"primary_key"},
 		    {"key":"name", "value":"", "type":"string"},
-		    {"key":"star", "value":"", 
+		    {"key":"star", "value":"",
                       "values":{ "items":[
                                 { "item":"" },
                                 { "item":"1" },
@@ -18,7 +19,7 @@
                             ]
                         }, "type":"stringcombo"
                     },
-                    {"key":"internet_access", "value":"", 
+                    {"key":"internet_access", "value":"",
                       "values":{ "items":[
                               { "item":"" },
                               { "item":"yes" },
@@ -29,7 +30,7 @@
                           ]
                       }, "type":"stringcombo"
                     },
-		    {"key":"internet_access:fee", "value":"", 
+		    {"key":"internet_access:fee", "value":"",
                       "values":{ "items":[
                                 { "item":"" },
                                 { "item":"yes" },
@@ -37,7 +38,7 @@
                             ]
                         }, "type":"stringcombo"
                     },
- 		    {"key":"wheelchair", "value":"", 
+ 		    {"key":"wheelchair", "value":"",
                       "values":{ "items":[
                                 { "item":"" },
                                 { "item":"yes" },
@@ -45,9 +46,9 @@
                                 { "item":"no" }
                             ]
                         }, "type":"stringcombo"
-                    },  
+                    },
 		    {"key":"capacity", "value":"", "type":"string"},
-		    {"key":"fee", "value":"", 
+		    {"key":"fee", "value":"",
                       "values":{ "items":[
                                 { "item":"" },
                                 { "item":"yes" },
@@ -62,7 +63,7 @@
                     {"key":"phone", "value":"", "type":"string"},
                     {"key":"fax", "value":"", "type":"string"},
                     {"key":"LONGITUDE", "value":"", "type":"hidden"},
-                    {"key":"LATITUDE", "value":"", "type":"hidden"}            
+                    {"key":"LATITUDE", "value":"", "type":"hidden"}
 		]
-	}
+	}]
 }]
