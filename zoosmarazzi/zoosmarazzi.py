@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import json
-import sys
 # try to import required library
 try:
     import osgeo.ogr as ogr
@@ -9,9 +8,9 @@ try:
 except ImportError:
     import ogr, osr
 try:
-    from OsmApi import OsmApi
+    from osmapi import OsmApi
 except ImportError:
-    import OsmApi
+    raise("Please install Python osmapi library")
 
 
 def getMapData(geom, api, buf=0.0002):
@@ -123,6 +122,7 @@ def checkNewPoint(geom, tags, pointData):
         else:
             return 0
 
+
 def zoosmarazzi(conf, inputs, outputs):
     """ Function for ZOO for import vector data on OSM DB
     All parameters are passed from ZOO request
@@ -185,10 +185,10 @@ def zoosmarazzi(conf, inputs, outputs):
                 geom.AddPoint_2D(float(nodeDef[unicode('lon')]),
                                  float(nodeDef[unicode('lat')]))
                 # get osm data near the feature (look function getMapData)
-                osmData = getMapData(geom,osmapi)
+                osmData = getMapData(geom, osmapi)
                 # from osm data extract only point
                 pointData = getPointData(osmData)
-                # made some control to search if feature already exist on osm db
+                # some control to search if feature already exist on osm db
                 if checkNewPoint(geom, tags, pointData):
                     osmapi.NodeCreate(nodeDef)
                     nfeaturesload += 1
@@ -206,5 +206,5 @@ def zoosmarazzi(conf, inputs, outputs):
         output = 'features_imported'
     else:
         output = 'features_imported_%i_%i' % (nfeaturesload, nfeatures)
-    outputs["output"]["value"]= output
+    outputs["output"]["value"] = output
     return 3
