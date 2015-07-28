@@ -1,6 +1,6 @@
 [{
         "sectionname": "osm",
-        "sectiondescription": "osm accomodation",
+        "sectiondescription": "osm_accomodation",
         "forms": [{
                 "formname":"",
 		"formitems":[

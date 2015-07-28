@@ -1,6 +1,6 @@
 [{
         "sectionname": "osm",
-        "sectiondescription": "osm camp site",
+        "sectiondescription": "osm_camp_site",
         "forms": [{
                 "formname":"",
 		"formitems":[
