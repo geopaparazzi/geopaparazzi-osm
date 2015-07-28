@@ -7,10 +7,10 @@
  serviceType = Python
  serviceProvider = zoosmarazzi
  <MetaData lang="en">
-   title = geopaposm
+   title = zoosmarazzi
  </MetaData>
  <MetaData lang="it">
-   title = geopaposm
+   title = zoosmarazzi
  </MetaData>
  <DataInputs>
   [inputvector]
